@@ -14,12 +14,12 @@ var DynamicTable = React.createClass({
       header: ['header', 'header'],
       table: [
         {
-          title: 'Round 1',
-          data: ['', '']
-        },
-        {
           title: 'Origin',
           data: [100, 100]
+        },
+        {
+          title: 'Round 1',
+          data: ['', '']
         }
       ]
     }
@@ -45,7 +45,7 @@ var DynamicTable = React.createClass({
     };
     for (var i = 0; i < header.length; i++)
       newRow.data.push('');
-    table.splice(0, 0, newRow);
+    table.push(newRow);
     this.setState({
       header: header,
       table: table
